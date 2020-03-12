@@ -1,0 +1,19 @@
+package com.example.zywienie;
+
+import android.app.Notification;
+import android.os.Build;
+import android.os.Bundle;
+
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.zywienie.R;
+
+
+public class MainActivity extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+}

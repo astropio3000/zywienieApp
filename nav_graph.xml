@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.zywienie.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+
+        <action
+            android:id="@+id/to_register_statement"
+            app:destination="@id/fragment_register" />
+        <action
+            android:id="@+id/to_login_statement"
+            app:destination="@+id/activity_login"/>
+    </fragment>
+    <fragment
+        android:id="@+id/activity_login"
+        android:name="com.example.zywienie.LoginActivity"
+        android:label="@string/title_activity_login"
+        tools:layout="@layout/activity_login">
+
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/fragment_register" />
+        <action
+            android:id="@+id/action_activity_login_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_activity_login_to_fragment_register"
+            app:destination="@id/fragment_register" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_register"
+        android:name="com.example.zywienie.toRegister"
+        android:label="to register"
+        tools:layout="@layout/fragment_register">
+
+        <action
+            android:id="@+id/come_to_RegisterFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_fragment_register_to_activity_login"
+            app:destination="@id/activity_login" />
+    </fragment>
+
+</navigation>
